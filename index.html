@@ -4,6 +4,7 @@
         <link href="style.css">
         <meta charset="utf-8">
         <title>我的網頁</title>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <style>
             body{background-image:  url(clouds-g5b02ccdf8_1920.jpg); height: fit-content;}
 
@@ -51,6 +52,16 @@
 
             </div>
         </div>
-        
+        <script>
+$(document).ready(function(){
+  $("#ele1").click(function(){
+    $("#ele2").toggle(1500);
+  });
+});
+</script>
+</head>
+<body>
+<p id='ele2'>Content to be toggled.</p>
+<button id='ele1'>Show / Hide</button>
     </body>
 </html>
