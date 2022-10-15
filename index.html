@@ -25,6 +25,7 @@
         </style>
         
     </head>
+    
 
         <div class="article">
 
@@ -34,6 +35,12 @@
 
             
             <div class="wrap">
+                <body>
+        <p id='ele2'></p>
+        <button id='ele1'>顯示or隱藏照片</button>
+        </br>
+        </br>
+        </body>
                 
             <div class="item">
                     <img src="food1.jpg" width="23%" alt="韓式料理" style="border: double;" >
@@ -52,16 +59,16 @@
 
             </div>
         </div>
+
         <script>
-$(document).ready(function(){
-  $("#ele1").click(function(){
-    $("#ele2").toggle(1500);
-  });
-});
-</script>
-</head>
-<body>
-<p id='ele2'>Content to be toggled.</p>
-<button id='ele1'>Show / Hide</button>
-    </body>
+        $(document).ready(function(){
+        $("#ele1").click(function(){
+        $("img").toggle(1500);
+        });
+        });
+        </script>
+    </head>
+
+        
+
 </html>
