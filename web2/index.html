@@ -4,6 +4,7 @@
         <!--下面那行表達的是網頁編碼-->
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
         <title>
             一起吃飯吧 
         </title>
@@ -56,12 +57,25 @@
                 
                 <td style="width:33%; height:90% ; vertical-align:top; text-align:center;">
                     <br><a href="中山.html"><input type="button" id="btn1" value="中山區" class="btn btn1" /></a></br><br>
-                    <img src = 中山首頁.jpg style="width: 350px;; height: 350px;" ><br><br>台北捷運中山站，除了有眾多知名商場可逛外。巷弄間更是有許多富有濃厚人文氣息的質小店可以逛逛。來中山站，除了可以滿足購物欲外，周邊地區可是藏著很多隱藏美食。從早午餐、甜點、下午茶，吃得巧、吃得飽、解嘴饞的美食在這裡都可以找得到！
+                    <img src = 中山首頁.jpg style="width: 350px;; height: 350px;" ><br><br>
+                    <button id="hider">隱藏</button>
+                    <button id="shower">顯示</button>
+                    <h4 style="font-weight: normal;">台北捷運中山站，除了有眾多知名商場可逛外。巷弄間更是有許多富有濃厚人文氣息的質小店可以逛逛。來中山站，除了可以滿足購物欲外，周邊地區可是藏著很多隱藏美食。從早午餐、甜點、下午茶，吃得巧、吃得飽、解嘴饞的美食在這裡都可以找得到！</h4>
+                    <script>
+                        $("#hider").on("click", function(){
+                            $("h4").fadeOut(400);
+                        });
+                        $("#shower").on("click", function(){
+                            $("h4").fadeIn(600);
+                        });
+                    </script>
                 </td>
+                
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; border-left: solid 1px gray; border-right: solid 1px gray; ">
                     <br><a href="大安.html"><input type="button" id="btn2" value="大安區" class="btn btn1" /></a><br><br>
-                    <img src = 大安首頁.jpg style="width: 350px;; height: 350px;" ></br><br>台北捷運中山站，除了有眾多知名商場可逛外。巷弄間更是有許多富有濃厚人文氣息的質小店可以逛逛。來中山站，除了可以滿足購物欲外，周邊地區可是藏著很多隱藏美食。從早午餐、甜點、下午茶，吃得巧、吃得飽、解嘴饞的美食在這裡都可以找得到！
+                    <img src = 大安首頁.jpg style="width: 350px;; height: 350px;" ></br><br>
+                    台北捷運中山站，除了有眾多知名商場可逛外。巷弄間更是有許多富有濃厚人文氣息的質小店可以逛逛。來中山站，除了可以滿足購物欲外，周邊地區可是藏著很多隱藏美食。從早午餐、甜點、下午茶，吃得巧、吃得飽、解嘴饞的美食在這裡都可以找得到！
                 </td>
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; ">
@@ -69,6 +83,9 @@
                     <img src = 信義首頁.jpg style="width: 350px;; height: 350px;" ><br><br>台北信義區餐廳推薦 / 台北信義區異國料理推薦的懶人包來囉！小編是一位超愛逛街的愛好者，幾乎每個週末都會跑去台北信義區晃晃，不是看電影、買衣服就是看街頭藝人表演，但是每次來都很煩有什麼美食可以嚐鮮～這次哈旅行特別搜集了不少好吃的台北信義區餐廳名單，特別整理台北必吃 8 家信義區餐廳推薦，保證大家都不會踩雷～裡頭包括馬來麵、Thai J 等超高人氣的信義區餐廳，大家一定要收藏起來，以後來台北信義區就不用做功課囉！
                 </td>
             </tr>
+            <br>
         </table>
+
+        
     </body>
 </html>
