@@ -3,20 +3,20 @@
     <head>
         <meta charset="utf-8">
         <style>
-            h1{background-color: rgba(218, 179, 159, 0.42);}
+            
             .article{text-align: center;}
         </style>
     </head>
     
     <body style="background-color: #F1E7DD;">
         <style>
-            a{
+            .food{
             width: 45px; padding: 5px;
             text-decoration: none;
             background-color: rgba(157, 199, 237, 0.61); color: black;
             border-radius: 10px;
             }
-            a:hover {
+            .food:hover {
                 background-color: rgba(217, 152, 239, 0.619); color: white;
                 transition: background-color 3s Os, color 2s 1s;
             }
@@ -34,19 +34,66 @@
                 background-color: rgba(155, 93, 118, 0.721); color: white;
                 transition: background-color 3s Os, color 2s 1s;
             }   
+
+
+            body {
+                padding: 20px 0;
+            }
+
+            h1, h2 {
+                margin: 0;
+                padding: 34px 0 14px 40px;
+            }
+        
+            nav > ul {
+                background-color: rgba(218, 179, 159, 0.42);
+                list-style: none;   /* 移除項目符號 */
+                margin: 0;
+                padding: 0;
+            }
+        
+            nav a {
+                color: inherit; /* 移除超連結顏色 */
+                display: block; /* 讓 <a> 填滿 <li> */
+                font-size: 1.2rem;
+                padding: 10px;
+                text-decoration: none;  /* 移除超連結底線 */
+            }
+        
+            nav li:hover {
+                background-color: rgb(176, 143, 143);
+                color: white;
+            }
+        
+            .flex-nav {
+                display: flex;
+                justify-content: right;
+            }
         
             </style>
         
+
+        <nav>        
+            <ul class="flex-nav">
+            <li><a href="index.html">首頁&ensp;|</a></li>
+            <li><a href="中山.html">中山區&ensp;|</a></li>
+            <li><a href="大安.html">大安區&ensp;|</a></li>
+            <li><a href="信義.html">信義區&ensp;|</a></li>
+            <li><a href="關於.html">關於&ensp;</a></li>        
+            </ul>
+        </nav>
+
+
         
     <div class="article">
-    <h1 style="color: rgba(74, 71, 71, 0.411);">大安區美食</h1>
+    <h1 style="color:  rgba(115, 95, 95, 0.733); text-shadow: rgb(255, 255, 255) 1.5px 1.5px">大安區美食</h1>
     <table BORDER WIDTH=85% align=center >
         <tr>
             <td><img src="moon.jpg" width="30%"></td>
             <td style="height:35%;width:300;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">Moon Baking Studio</h3>電話:0223255251<br>地址:台北市大安區復興南路一段295巷13弄4號<br>
                 這家真的有夠驚艷！點的餐點每一樣都很好吃～<br>尤其是BBQ熱狗堡跟蛋堡🤤<br><br>
-                <a href="https://g.page/_moon_baking?share">餐廳位置資訊</a><br><br>
+                <a href="https://g.page/_moon_baking?share" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -57,7 +104,7 @@
                 比薩上面的海鮮還有起司 超多！看起來超罪惡<br>
                 旁邊看起來不起眼的炸雞超好吃！<br>
                 根本就是被比薩店耽誤的炸雞～<br><br>
-                <a href="https://goo.gl/maps/yVQEC2yz5qEtiKJcA">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/yVQEC2yz5qEtiKJcA" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -67,7 +114,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">廚藏室STOREROOM</h3>電話:0227018637<br>地址:台北市大安區復興南路一段340巷26號<br>
                 威靈頓牛排真的是平價又好吃🤤  外面的酥皮非常脆、肉很嫩，<br>
                 兩個結合起來根本就像豆漿和油條一樣啊～～<br><br>
-                <a href="https://goo.gl/maps/X6Zh24edvA9wpb3u5">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/X6Zh24edvA9wpb3u5" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -77,7 +124,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">咚咚家韓式豬肉</h3>電話:0227313466<br>地址:台北市大安區光復南路280巷29號<br>
                 烤肉份量蠻多的！小菜無限續，還有店員幫忙烤肉，<br>
                 我們要做的就是負責認真吃🤣<br><br>
-                <a href="https://g.page/ddgGF?share">餐廳位置資訊</a>
+                <a href="https://g.page/ddgGF?share" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -87,7 +134,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">路易奇電力公司</h3>電話:0227780686<br>地址:台北市大安區市民大道四段72號1號<br>
                 這家燒肉cp值真的很高！<br>
                 平價的燒肉肉質卻很好！<br><br>
-                <a href="https://goo.gl/maps/VEjKmfcDCCGLiknXA">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/VEjKmfcDCCGLiknXA" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -98,7 +145,7 @@
                 這家是我私心最愛的咖哩店！<br>
                 豬排咖哩的豬排真的是外酥內嫩<br>
                 配上滿滿一口的咖哩飯真的是絕了<br><br>
-                <a href="https://goo.gl/maps/XqHhPZbGtobcsfoU6">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/XqHhPZbGtobcsfoU6" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -109,7 +156,7 @@
                 咖哩比較重口味，配上白飯能完美中和<br>
                 配上炸蛋以及附的醃蘿蔔真的推，<br>
                 還有免費的湯可以續一次<br><br>
-                <a href="https://g.page/tongan-curry?share">餐廳位置資訊</a>
+                <a href="https://g.page/tongan-curry?share" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -119,7 +166,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">Everywhere burger club漢堡俱樂部</h3>電話:0227046825<br>地址:106台北市大安區光復南路420巷21號<br>
                 號稱台北最強漢堡店 真的很好吃！<br>
                 而且人潮滿滿 漢堡配上薯條再喝一口可樂！絕配<br><br>
-                <a href="https://goo.gl/maps/uvDzDt2FyEvMBTHG9">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/uvDzDt2FyEvMBTHG9" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -129,7 +176,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">老咖哩｜日式洋食｜手炒熟成</h3>電話:0227323281<br>地址:106台北市大安區樂利路86巷6號之1<br>
                 六張犁真的是咖哩聚集地！<br>
                 這家特別的是會附上薯塊以及薄餅<br><br>
-                <a href="hhttps://goo.gl/maps/tQT34nmEtNYRzPj56">餐廳位置資訊</a><br><br>
+                <a href="hhttps://goo.gl/maps/tQT34nmEtNYRzPj56" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -139,7 +186,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">Luigi 路易奇洗衣公司</h3>電話:0227553709<br>地址:台北市大安區安和路一段112巷1號1F<br>
                 路易奇系列的餐廳真的另人驚豔<br>
                 CP值都很高！餐點份量不多，但都很好吃啊！<br><br>
-                <a href="https://goo.gl/maps/MLdXef6RDCWUs2BF6">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/MLdXef6RDCWUs2BF6" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -151,7 +198,7 @@
                 茶味比較重的飲料 但真的很好喝！<br>
                 珍珠QQ的 莓果萊姆波波是氣泡水加奇亞籽<br>
                 喝起來很特別也是我的最愛<br><br>
-                <a href="https://goo.gl/maps/swvNoav11zvfWsbn8">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/swvNoav11zvfWsbn8" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 
@@ -163,7 +210,7 @@
                 就是為了這道餐點來的果然沒有讓我失望<br>
                 法式吐司 阿華田 香草冰淇淋<br>
                 吐司完美吸收了阿華田的精華，配上香草冰淇淋，我只能拍拍手<br><br>
-                <a href="https://goo.gl/maps/qFaFP8EPn3gv83478">餐廳位置資訊</a><br><br>
+                <a href="https://goo.gl/maps/qFaFP8EPn3gv83478" class="food">餐廳位置資訊</a><br><br>
             </td>
         </tr>
 

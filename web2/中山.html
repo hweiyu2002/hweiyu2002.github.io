@@ -2,21 +2,20 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <style>
-            h1{background-color: rgba(218, 179, 159, 0.42);}
+        <style>            
             .article{text-align: center;}
         </style>
     </head>
     
     <body style="background-color: #F1E7DD;">
         <style>
-            a{
+            .food{
             width: 45px; padding: 5px;
             text-decoration: none;
             background-color: rgba(157, 199, 237, 0.61); color: black;
             border-radius: 10px;
             }
-            a:hover {
+            .food:hover {
                 background-color: rgba(217, 152, 239, 0.619); color: white;
                 transition: background-color 3s Os, color 2s 1s;
             }
@@ -36,18 +35,64 @@
                 transition: background-color 3s Os, color 2s 1s;
             }
 
+
+            body {
+                padding: 20px 0;
+            }
+
+            h1, h2 {
+                margin: 0;
+                padding: 34px 0 14px 40px;
+            }
+
+            nav > ul {
+                background-color: rgba(218, 179, 159, 0.42);
+                list-style: none;   /* 移除項目符號 */
+                margin: 0;
+                padding: 0;
+            }
+
+            nav a {
+             color: inherit; /* 移除超連結顏色 */
+             display: block; /* 讓 <a> 填滿 <li> */
+             font-size: 1.2rem;
+             padding: 10px;
+             text-decoration: none;  /* 移除超連結底線 */
+            }
+
+            /* 滑鼠移到 <a> 時變成深底淺色 */
+            nav li:hover {
+                background-color: rgb(176, 143, 143);
+                color: white;
+            }
+
+            .flex-nav {
+                display: flex;
+                justify-content: right;
+            }
+
         </style>
+
+        <nav>        
+            <ul class="flex-nav">
+            <li><a href="index.html">首頁&ensp;|</a></li>
+            <li><a href="中山.html">中山區&ensp;|</a></li>
+            <li><a href="大安.html">大安區&ensp;|</a></li>
+            <li><a href="信義.html">信義區&ensp;|</a></li>
+            <li><a href="關於.html">關於&ensp;</a></li>        
+            </ul>
+        </nav>
         
         
     <div class="article">
-    <h1 style="color: rgba(74, 71, 71, 0.411);">中山區美食</h1>
+    <h1 style="color: rgba(115, 95, 95, 0.733); text-shadow: rgb(255, 255, 255) 1.5px 1.5px">中山區美食</h1>
     <table BORDER WIDTH=85% align=center >
         <tr>
             <td><img src="仙草.jpg" width="30%"></td>
             <td style="height:35%;width:300;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">八時神仙草 中山店</h3>電話:0229526972<br>地址:台北市中山區中山北路一段135巷5號<br>
                 仙草不會太甜，透明的珍珠真的很Q！<br><br>
-                <a href="https://goo.gl/maps/cfVvnpzxHdVj7RMQ7">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/cfVvnpzxHdVj7RMQ7" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -56,7 +101,7 @@
             <td style="height:100px;width:500px;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">不賴皮 義式窯烤披薩 錦州店</h3>電話:0225160798<br>地址:10491台北市中山區錦州街385號<br>
                 薄皮比薩，料很豐富～<br><br>
-                <a href="https://goo.gl/maps/1WDHXFeoGExBzepU6">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/1WDHXFeoGExBzepU6" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -65,7 +110,7 @@
             <td style="height:100px;width:500px;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">SOMA特調飲品 中山概念店 Tea & Mocktail</h3>電話:0225638286<br>地址:台北市中山區中山北路二段20巷23號<br>
                 中山有名的飲料店！好喝～<br><br>
-                <a href="https://goo.gl/maps/ThQRrB8q1txexwST6">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/ThQRrB8q1txexwST6" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -74,7 +119,7 @@
             <td style="height:100px;width:500px;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">GALERIE Bistro 家樂利小酒館</h3>電話:0225580096<br>地址:台北市大同區南京西路25巷2號<br>
                 位於中山站的網美餐廳 環境優雅 適合拍照！<br><br>
-                <a href="https://goo.gl/maps/uzaUDNd4w47yHawr5">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/uzaUDNd4w47yHawr5" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -84,7 +129,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">點冰室·ジャビン</h3>電話:0907495158<br>地址:台北市大同區承德路二段53巷33號<br>
                 為了草莓而來的啊！份量足夠～推推！<br>
                 但要提前預約 否則可能就會吃不到！<br><br>
-                <a href="https://goo.gl/maps/4RKagj1oBQiXo7jw8">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/4RKagj1oBQiXo7jw8" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -94,7 +139,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">韓金館</h3>電話:0225361997<br>地址:台北市中山區林森北路119巷68號<br>
                 這家的馬鈴薯豬骨湯真的超推薦！<br>
                 豬骨入口即化，料非常多！ 2-3人一起吃！很滿足～～<br><br>
-                <a href="https://goo.gl/maps/4b62Ria4xnWkfrob6">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/4b62Ria4xnWkfrob6" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -103,7 +148,7 @@
             <td style="height:100px;width:500px;" align="center" valign="middle">
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">荷蘭小鬆餅南西中山店</h3>電話:0225527796<br>地址:台北市大同區南京西路64巷9弄19號<br>
                 一口大小的鬆餅是店裡的招牌，灑上糖粉，我沒了<br><br>
-                <a href="https://goo.gl/maps/PnuAZvbjDaSRHxas7">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/PnuAZvbjDaSRHxas7" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -113,7 +158,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">娘子家咖啡</h3>電話:0225500298<br>地址:台北市大同區南京西路25巷18之6號2樓<br>
                 咖啡廳兼韓式料理餐廳！<br>
                 食物份量很多～餐點好吃！也很正宗<br><br>
-                <a href="https://goo.gl/maps/gUSVEca6wqpai7246">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/gUSVEca6wqpai7246" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
@@ -123,7 +168,7 @@
                 <h3 style="color:rgba(147, 66, 66, 0.721) ;">TUTTO BELLO</h3>電話:0225923355<br>地址:台北市中山區雙城街25巷15號1樓<br>
                 完完全全被干貝龍蝦濃湯驚豔到！真的太好喝了🤤<br>
                 另外牛排外酥內嫩 肉汁在嘴巴裡面爆開 我沒了<br><br>
-                <a href="https://goo.gl/maps/cKuVXiiv3oT1Y55RA">餐廳位置資訊</a>
+                <a href="https://goo.gl/maps/cKuVXiiv3oT1Y55RA" class="food">餐廳位置資訊</a>
             </td>
         </tr>
 
