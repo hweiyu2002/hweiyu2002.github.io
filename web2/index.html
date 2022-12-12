@@ -4,17 +4,19 @@
         <!--下面那行表達的是網頁編碼-->
         <meta charset="UTF-8"/>        
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-        
-        
-        <title>
-            一起吃飯吧 
-        </title>
-        <style>
-            .btn{
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </head>
+
+    <title>
+        一起吃飯吧 
+    </title>
+
+    <style>
+        .enter{
                 width: 120px;
                 height: 50px;
                 border: none;
-                background:  rgb(202, 195,187);
+                background:  rgb(212, 169, 169);
                 border: 2px solid gray;  
                 text-align: center;
                 display: inline-block;
@@ -27,132 +29,124 @@
                 text-transform: uppercase;
                 border-radius: 20px;
             }
-            .btn1 {
-                background-color:  #D6CCC2; 
-                color: rgba(53, 52, 52, 0.945); 
+            .enter{
+                background-color:  #e5c6c6; 
+                color: rgba(109, 92, 92, 0.945); 
                 border: 2px solid rgb(163, 161, 161);
             }
-            .btn1:hover {
+            .enter:hover {
                 background-color: rgb(191, 146, 146);
                 color: rgb(255, 255, 255);
             }
-            img{
-                max-width:100%;
-                height:auto;
 
-            }
             body {
                 padding: 20px 0;
             }
-
             h1, h2 {
                 margin: 0;
                 padding: 34px 0 14px 40px;
-            }
-        
+            }        
             nav > ul {
                 background-color: rgba(218, 179, 159, 0.42);
                 list-style: none;   /* 移除項目符號 */
                 margin: 0;
                 padding: 0;
             }
-        
             nav a {
                 color: inherit; /* 移除超連結顏色 */
                 display: block; /* 讓 <a> 填滿 <li> */
                 font-size: 1.2rem;
                 padding: 10px;
                 text-decoration: none;  /* 移除超連結底線 */
-            }
-        
+            }        
             nav li:hover {
                 background-color: rgb(176, 143, 143);
                 color: white;
-            }
-        
+            }        
             .flex-nav {
                 display: flex;
                 justify-content: right;
             }
 
-            tbody{
-                background-color: #f7f0e9cc;;
-            }
 
-        
-        </style>       
-    </head>
-   
-    <body style="background-color: #F1E7DD;">   
-        
-    <nav>        
-        <ul class="flex-nav">
-        <li><a href="index.html">首頁&ensp;|</a></li>
-        <li><a href="中山.html">中山區&ensp;|</a></li>
-        <li><a href="大安.html">大安區&ensp;|</a></li>
-        <li><a href="信義.html">信義區&ensp;|</a></li>
-        <li><a href="關於.html">關於&ensp;</a></li>        
-        </ul>
-    </nav>
 
-    
-    <h1 style="text-align: center; color:rgb(176, 143, 143);  font-size:50px; text-shadow: white 2.5px 2.5px">
-            一起吃飯吧 </h1>
-         
-        
-           
+
+            .ml9 {
+                position: relative;
+                font-weight: 200;
+                font-size: 4em;
+                }
+
+            .ml9 .text-wrapper {
+                position: relative;
+                display: inline-block;
+                padding-top: 0.2em;
+                padding-right: 0.05em;
+                padding-bottom: 0.1em;
+                overflow: hidden;
+                }
+
+            .ml9 .letter {
+                transform-origin: 50% 100%;
+                display: inline-block;
+                line-height: 1em;
+                }
+
+        </style>
+
             
-        <table BORDER WIDTH=90% align=center>
-            <tr>
-                
-                <td style="width:33%; height:90% ; vertical-align:top; text-align:center;">
-                    <br><a href="中山.html"><input type="button" id="btn1" value="中山區" class="btn btn1" /></a></br><br>
-                    <img src = 中山首頁.jpg style="width: 350px; height: 350px;" ><br><br>                    
-                    <h3 style="font-weight: normal; color: dimgray;">
-                        在百貨林立的中山區，巷弄裡有著許多質感小店、隱藏美食、潮流服飾等，
-                        逛累了可以到咖啡廳休息，那裡有很多不同風格的咖啡廳可以選擇， 
-                        圖片中的店正位於中山區的一條小巷子裡，那間是由老公寓去改建而成，整間店的裝潢明亮又不擁擠，餐點也表現不錯。
-                        整體有點在繁忙的都市裡偷閒的感覺，推薦給喜歡到咖啡廳拍照吃美食的人!
-                        </h3>
-                    
-                </td>
-                
+    <body style="background-color: #F1E7DD;">
 
-                <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; border-left: solid 1px gray; border-right: solid 1px gray; ">
-                    <br><a href="大安.html"><input type="button" id="btn2" value="大安區" class="btn btn1" /></a><br><br>
-                    <img src = 大安首頁.jpg style="width: 350px;; height: 350px;" ></br><br>
-                    <h3 style="font-weight: normal; color: dimgray;">
-                        台北大安區根本就是美食聚集地！
-                        不僅捷運便利，還可以逛街吃美食的好地方！
-                        咖啡廳、火鍋店、牛排館、各式各樣的美食餐廳應有儘有。</h3>
-                    
-                </td>
+        <nav>        
+            <ul class="flex-nav">
+            <li><a href="home.html">首頁&ensp;|</a></li>
+            <li><a href="中山.html">中山區&ensp;|</a></li>
+            <li><a href="大安.html">大安區&ensp;|</a></li>
+            <li><a href="信義.html">信義區&ensp;|</a></li>
+            <li><a href="關於.html">關於&ensp;</a></li>        
+            </ul>
+        </nav>
 
-                <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; ">
-                    <br><a href="信義.html"><input type="button" id="btn3" value="信義區" class="btn btn1" /></a></br><br>
-                    <img src = 信義首頁.jpg style="width: 350px;; height: 350px;" ><br><br>
-                    <h3 style="font-weight: normal; color: dimgray;">
-                        推薦信義區美食餐廳，信義區除了各大精品以及百貨公司之外，
-                        還有許多美食餐廳，從高級的餐廳到平價的餐廳通通有！一起點進來看看吧～</h3>
-                    
-                </td>
-            </tr>
+        <div style="text-align:center">
+        <h1 class="ml9">
             <br>
-        </table>
-
-    <div style="text-align: center;">
-        <p id='ele2'></p>
-        <button id='ele1' >隱藏/顯示介紹</button>        
-    
-    <script>
-        $(document).ready(function(){
-        $("#ele1").click(function(){
-        $("h3").toggle(1500);
-        });
-        });
-    </script>
+            <span class="text-wrapper"></span>
+              <span class="letters" style="color:rgb(163, 134, 134); font-weight:bold; font-size:60px; text-shadow: rgb(255, 255, 255) 3.5px 3.5px">一起吃飯吧！</span>
+            </span>
+          </h1>
+        </div>
           
-    </div>
+          
+        
 
-</body>
+            <div style="text-align:center">             
+                    <h2 style="text-align: center; color:rgb(163, 144, 144);  font-size:30px; text-shadow: white 2.5px 2.5px">
+                        你···肚子餓了嗎</h2>
+                        <br> <br> <br> 
+                        <a href="home.html"><input type="button" value="進入網站" class="enter" /></a>
+                    
+            </div>
+
+    <script>
+      var textWrapper = document.querySelector('.ml9 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                anime.timeline({loop: true})
+                .add({
+                 targets: '.ml9 .letter',
+                    scale: [0, 1],
+                    duration: 1500,
+                    elasticity: 600,
+                    delay: (el, i) => 45 * (i+1)
+                }).add({
+                    targets: '.ml9',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+    </script>
+
+      
+    </body> 
 </html>

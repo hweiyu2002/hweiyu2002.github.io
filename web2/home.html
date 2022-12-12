@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--下面那行表達的是網頁編碼-->
+        <meta charset="UTF-8"/>        
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script language="JavaScript1.1">
+
+        
+            
+            var specifyimage=new Array() //Your images
+            specifyimage[0]="中山首頁.png"
+            specifyimage[1]="中山1.jpg"
+            specifyimage[2]="中山2.jpg"
+            specifyimage[3]="中山3.jpg"
+            
+            var delay=3000 //3 seconds
+            
+            //Counter for array 
+            var count =1;
+            
+            var cubeimage=new Array()
+            for (i=0;i<specifyimage.length;i++){
+            cubeimage[i]=new Image()
+            cubeimage[i].src=specifyimage[i]
+            }
+            
+            function movecube(){
+            if (window.createPopup)
+                cube.filters[0].apply()
+                document.images.cube.src=cubeimage[count].src;
+            if (window.createPopup)
+                cube.filters[0].play()
+                count++;
+            if (count==cubeimage.length)
+                count=1;
+            setTimeout("movecube()",delay)
+            }
+            function cycle(){
+                counter++;
+                if(counter == banners.length)
+                counter = 0;
+                document.getElementById("banner").src = banners[counter];
+            }
+
+            
+            window.onload=new Function("setTimeout('movecube()',delay)")
+            </script>
+            
+            
+        
+        
+        <title>
+            一起吃飯吧 
+        </title>
+        <style>
+            .btn{
+                width: 120px;
+                height: 50px;
+                border: none;
+                background:  rgb(202, 195,187);
+                border: 2px solid gray;  
+                text-align: center;
+                display: inline-block;
+                font-size: 24px;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                cursor: pointer;
+                text-decoration: none;
+                text-transform: uppercase;
+                border-radius: 20px;
+            }
+            .btn1 {
+                background-color:  #D6CCC2; 
+                color: rgba(53, 52, 52, 0.945); 
+                border: 2px solid rgb(163, 161, 161);
+            }
+            .btn1:hover {
+                background-color: rgb(191, 146, 146);
+                color: rgb(255, 255, 255);
+            }
+            img{
+                max-width:100%;
+                height:auto;
+
+            }
+            body {
+                padding: 20px 0;
+            }
+
+            h1, h2 {
+                margin: 0;
+                padding: 34px 0 14px 40px;
+            }
+        
+            nav > ul {
+                background-color: rgba(218, 179, 159, 0.42);
+                list-style: none;   /* 移除項目符號 */
+                margin: 0;
+                padding: 0;
+            }
+        
+            nav a {
+                color: inherit; /* 移除超連結顏色 */
+                display: block; /* 讓 <a> 填滿 <li> */
+                font-size: 1.2rem;
+                padding: 10px;
+                text-decoration: none;  /* 移除超連結底線 */
+            }
+        
+            nav li:hover {
+                background-color: rgb(176, 143, 143);
+                color: white;
+            }
+        
+            .flex-nav {
+                display: flex;
+                justify-content: right;
+            }
+
+            tbody{
+                background-color: #f7f0e9cc;;
+            }
+
+        
+        </style>       
+    </head>
+   
+    <body style="background-color: #F1E7DD;">   
+      
+    <nav>        
+        <ul class="flex-nav">
+        <li><a href="index.html">首頁&ensp;|</a></li>
+        <li><a href="中山.html">中山區&ensp;|</a></li>
+        <li><a href="大安.html">大安區&ensp;|</a></li>
+        <li><a href="信義.html">信義區&ensp;|</a></li>
+        <li><a href="關於.html">關於&ensp;</a></li>        
+        </ul>
+    </nav>
+
+    
+    <h1 style="text-align: center; color:rgb(176, 143, 143);  font-size:50px; text-shadow: white 2.5px 2.5px">
+            一起吃飯吧 </h1>
+         
+        
+           
+            
+        <table BORDER WIDTH=90% align=center>
+            <tr>
+                
+                <td style="width:33%; height:90% ; vertical-align:top; text-align:center;">
+                    <br><a href="中山.html"><input type="button" id="btn1" value="中山區" class="btn btn1" /></a></br><br>
+                    <img src="中山首頁.jpg" style="width: 350px; height: 350px;" name="cube" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>                    
+                    <h3 style="font-weight: normal; color: dimgray;">
+                        在百貨林立的中山區，巷弄裡有著許多質感小店、隱藏美食、潮流服飾等，
+                        逛累了可以到咖啡廳休息，那裡有很多不同風格的咖啡廳可以選擇， 
+                        圖片中的店正位於中山區的一條小巷子裡，那間是由老公寓去改建而成，整間店的裝潢明亮又不擁擠，餐點也表現不錯。
+                        整體有點在繁忙的都市裡偷閒的感覺，推薦給喜歡到咖啡廳拍照吃美食的人!
+                        </h3>
+                    
+                </td>
+                
+
+                <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; border-left: solid 1px gray; border-right: solid 1px gray; ">
+                    <br><a href="大安.html"><input type="button" id="btn2" value="大安區" class="btn btn1" /></a><br><br>
+                    <img src = 大安首頁.jpg style="width: 350px;; height: 350px;" ></br><br>
+                    <h3 style="font-weight: normal; color: dimgray;">
+                        台北大安區根本就是美食聚集地！
+                        不僅捷運便利，還可以逛街吃美食的好地方！
+                        咖啡廳、火鍋店、牛排館、各式各樣的美食餐廳應有儘有。</h3>
+                    
+                </td>
+
+                <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; ">
+                    <br><a href="信義.html"><input type="button" id="btn3" value="信義區" class="btn btn1" /></a></br><br>
+                    <img src = 信義首頁.jpg style="width: 350px;; height: 350px;" ><br><br>
+                    <h3 style="font-weight: normal; color: dimgray;">
+                        推薦信義區美食餐廳，信義區除了各大精品以及百貨公司之外，
+                        還有許多美食餐廳，從高級的餐廳到平價的餐廳通通有！一起點進來看看吧～</h3>
+                    
+                </td>
+            </tr>
+            <br>
+        </table>
+
+    <div style="text-align: center;">
+        <p id='ele2'></p>
+        <button id='ele1' >隱藏/顯示介紹</button>        
+    
+    <script>
+        $(document).ready(function(){
+        $("#ele1").click(function(){
+        $("h3").toggle(1500);
+        });
+        });
+    </script>
+          
+    </div>
+
+</body>
+</html>
