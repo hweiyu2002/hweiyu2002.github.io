@@ -9,45 +9,71 @@
         
             
             var specifyimage=new Array() //Your images
-            specifyimage[0]="中山1.png"
+            specifyimage[0]="中山1.jpg"
             specifyimage[1]="中山2.jpg"
             specifyimage[2]="中山3.jpg"
             specifyimage[3]="中山4.png"
+
+            var specifyimage2=new Array()
+            specifyimage2[0]="大安1.jpg"
+            specifyimage2[1]="大安2.png"
+            specifyimage2[2]="大安3.jpg"
+            specifyimage2[3]="大安4.jpg"
+
+            var specifyimage3=new Array()
+            specifyimage3[0]="信義1.jpg"
+            specifyimage3[1]="信義2.jpg"
+            specifyimage3[2]="信義3.jpg"
+            specifyimage3[3]="信義4.jpg"
+
             
-            var delay=2000 //3 seconds
+            var delay= 2000
             
             //Counter for array 
             var count =1;
             
             var cubeimage=new Array()
-            for (i=0;i<specifyimage.length;i++){
+            var cubeimage2=new Array()
+            var cubeimage3=new Array()
+
+            for (i=0;i<specifyimage.length;i++) {
             cubeimage[i]=new Image()
             cubeimage[i].src=specifyimage[i]
+            cubeimage2[i]=new Image()
+            cubeimage2[i].src=specifyimage2[i]
+            cubeimage3[i]=new Image()
+            cubeimage3[i].src=specifyimage3[i]
             }
+
             
             function movecube(){
-            if (window.createPopup)
+            if (window.createPopup) 
                 cube.filters[0].apply()
-                document.images.cube.src=cubeimage[count].src;
+                document.images.cube.src=cubeimage[count].src
+                //cube2.filters[0].apply()
+                //document.images.cube2.src=cubeimage2[count].src
+                //cube3.filters[0].apply()
+                //document.images.cube3.src=cubeimage3[count].src;
+            
+
             if (window.createPopup)
                 cube.filters[0].play()
+                //cube2.filters[0].play()
+                //cube3.filters[0].play()
                 count++;
+            
+
             if (count==cubeimage.length)
-                count=1;
+                count=0;
+
             setTimeout("movecube()",delay)
-            }
-            function cycle(){
-                counter++;
-                if(counter == banners.length)
-                counter = 0;
-                document.getElementById("banner").src = banners[counter];
             }
 
             
             window.onload=new Function("setTimeout('movecube()',delay)")
             </script>
-            
-            
+
+      
         
         
         <title>
@@ -164,7 +190,7 @@
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; border-left: solid 1px gray; border-right: solid 1px gray; ">
                     <br><a href="大安.html"><input type="button" id="btn2" value="大安區" class="btn btn1" /></a><br><br>
-                    <img src = 大安首頁.jpg style="width: 350px;; height: 350px;" ></br><br>
+                    <img src="大安1.jpg" style="width: 350px; height: 350px;" name="cube2" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"></br><br>
                     <h3 style="font-weight: normal; color: dimgray;">
                         台北大安區根本就是美食聚集地！
                         不僅捷運便利，還可以逛街吃美食的好地方！
@@ -174,7 +200,7 @@
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; ">
                     <br><a href="信義.html"><input type="button" id="btn3" value="信義區" class="btn btn1" /></a></br><br>
-                    <img src = 信義首頁.jpg style="width: 350px;; height: 350px;" ><br><br>
+                    <img src="信義1.jpg" style="width: 350px; height: 350px;" name="cube3" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>
                     <h3 style="font-weight: normal; color: dimgray;">
                         推薦信義區美食餐廳，信義區除了各大精品以及百貨公司之外，
                         還有許多美食餐廳，從高級的餐廳到平價的餐廳通通有！一起點進來看看吧～</h3>
