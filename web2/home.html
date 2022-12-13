@@ -30,41 +30,20 @@
             //Counter for array 
             var count =1;
             
-            var cubeimage=new Array()
-            var cubeimage2=new Array()
-            var cubeimage3=new Array()
-
-            for (i=0;i<specifyimage.length;i++) {
-            cubeimage[i]=new Image()
-            cubeimage[i].src=specifyimage[i]
-            cubeimage2[i]=new Image()
-            cubeimage2[i].src=specifyimage2[i]
-            cubeimage3[i]=new Image()
-            cubeimage3[i].src=specifyimage3[i]
-            }
-
-            
             function movecube(){
-            if (window.createPopup) 
-                cube.filters[0].apply()
-                document.images.cube.src=cubeimage[count].src
-                //cube2.filters[0].apply()
-                //document.images.cube2.src=cubeimage2[count].src
-                //cube3.filters[0].apply()
-                //document.images.cube3.src=cubeimage3[count].src;
-            
-
-            if (window.createPopup)
-                cube.filters[0].play()
-                //cube2.filters[0].play()
-                //cube3.filters[0].play()
-                count++;
-            
-
-            if (count==cubeimage.length)
-                count=0;
-
-            setTimeout("movecube()",delay)
+    if (count >= 0){
+     if (count == 3){
+      count = 0;
+     }else{
+      count += 1;
+     }
+     document.getElementById("cube1").src = specifyimage[count];
+     document.getElementById("cube2").src = specifyimage2[count];
+     document.getElementById("cube3").src = specifyimage3[count];
+    }else{
+     count = 1;
+    }
+    setTimeout("movecube()", delay);
             }
 
             
@@ -175,7 +154,7 @@
                 
                 <td style="width:33%; height:90% ; vertical-align:top; text-align:center;">
                     <br><a href="中山.html"><input type="button" id="btn1" value="中山區" class="btn btn1" /></a></br><br>
-                    <img src="中山1.jpg" style="width: 350px; height: 350px;" name="cube" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>                    
+                    <img id=cube1 src="中山1.jpg" style="width: 350px; height: 350px;" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>                    
                     <h3 style="font-weight: normal; color: dimgray;">
                         在百貨林立的中山區，巷弄裡有著許多質感小店、隱藏美食、潮流服飾等，
                         逛累了可以到咖啡廳休息，那裡有很多不同風格的咖啡廳可以選擇， 
@@ -188,7 +167,7 @@
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; border-left: solid 1px gray; border-right: solid 1px gray; ">
                     <br><a href="大安.html"><input type="button" id="btn2" value="大安區" class="btn btn1" /></a><br><br>
-                    <img src="大安1.jpg" style="width: 350px; height: 350px;" name="cube2" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"></br><br>
+                    <img id=cube2 src="大安1.jpg" style="width: 350px; height: 350px;" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"></br><br>
                     <h3 style="font-weight: normal; color: dimgray;">
                         台北大安區根本就是美食聚集地！
                         不僅捷運便利，還可以逛街吃美食的好地方！
@@ -198,7 +177,7 @@
 
                 <td style="width: 33%; height: 90%; vertical-align: top; text-align: center; ">
                     <br><a href="信義.html"><input type="button" id="btn3" value="信義區" class="btn btn1" /></a></br><br>
-                    <img src="信義1.jpg" style="width: 350px; height: 350px;" name="cube3" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>
+                    <img id=cube3 src="信義1.jpg" style="width: 350px; height: 350px;" border="0" style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')"><br><br>
                     <h3 style="font-weight: normal; color: dimgray;">
                         推薦信義區美食餐廳，信義區除了各大精品以及百貨公司之外，
                         還有許多美食餐廳，從高級的餐廳到平價的餐廳通通有！一起點進來看看吧～</h3>
